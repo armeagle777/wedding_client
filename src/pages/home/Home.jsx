@@ -1,10 +1,10 @@
-import { BrowserView } from 'react-device-detect';
+import { BrowserView } from "react-device-detect";
 
 const Home = () => {
   return (
     <>
       <BrowserView>
-        <p>Home</p>
+        <p>New Home</p>
       </BrowserView>
     </>
   );
