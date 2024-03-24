@@ -4,6 +4,6 @@ export * from "./Header";
 export * from "./Footer";
 export * from "./Content";
 export * from "./AppRouter";
-export * from "../pages/Guest";
+export * from "./MarkerButton";
 export * from "./AcceptSection";
 export * from "./GuestTableSection";

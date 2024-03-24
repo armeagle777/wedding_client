@@ -14,7 +14,6 @@ import "../../assets/css/style.css";
 
 import profileImage from "../../assets/profile.jpg";
 import circleImage from "../../assets/hero_circle.png";
-import frameImage from "../../assets/frame.jpg";
 import serviceOneImage from "../../assets/service1.png";
 import vanqImage from "../../assets/harijavanq.png";
 import flowerOne from "../../assets/services_flower1.png";
@@ -31,16 +30,20 @@ import storyFlLeft from "../../assets/shape_left.png";
 import storyShapeRight from "../../assets/shape_right.png";
 import storyFlTop from "../../assets/flower_top.png";
 
-import { AcceptSection, GuestTableSection } from "@/components";
+import { AcceptSection, GuestTableSection, MarkerButton } from "@/components";
 
 const Content = () => {
   const invitedPersonName = `Հարգելի Սահակյաններ.`;
 
   // Function to open Google Maps with the given location
-  const openGoogleMap = () => {
-    const location = "YOUR_LOCATION";
+  const openGoogleMap = ({ target }) => {
+    const locations = {
+      church: "Հառիճավանք",
+      restaurant: "Victoria Wedding Hall",
+    };
+    const location = locations[target];
     const url = `https://www.google.com/maps/search/?api=1&query=${location}`;
-    console.log("Map");
+
     if (isDesktop) {
       window.open(url, "_blank");
     } else {
@@ -69,7 +72,6 @@ const Content = () => {
               className="container"
               style={{
                 position: "relative",
-                // backgroundColor: "red",
               }}
             >
               <div className="row d-flex align-items-center">
@@ -86,7 +88,7 @@ const Content = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         position: "absolute",
-                        right: 155,
+                        right: 165,
                         bottom: 80,
                       }}
                     >
@@ -127,7 +129,6 @@ const Content = () => {
                 <img src={storyFlRight} alt="" />
                 <p>{invitedPersonName}</p>
                 <p>Սիրով հրավիրում ենք մեր հարսանեկան արարողությանը:</p>
-                {/* <button onClick={openGoogleMap}>Map</button> */}
               </div>
             </div>
           </div>
@@ -160,7 +161,10 @@ const Content = () => {
                   <span>15:00-16:00</span>
                   <p>
                     Հառիճավանք
-                    <br /> ՀՀ, Շիրակի մարզ, գ. Հառիճ
+                    <br /> ՀՀ, Շիրակի մարզ, գ. Հառիճ{" "}
+                    <MarkerButton
+                      onClick={() => openGoogleMap({ target: "church" })}
+                    />
                   </p>
                 </div>
               </div>
@@ -181,7 +185,10 @@ const Content = () => {
                   <span>18:00-23:59</span>
                   <p>
                     «Վիկտորիա» ռեստորան
-                    <br /> ՀՀ, ք. Գյումրի, Մ. Խորենացի 10/3
+                    <br /> ՀՀ, ք. Գյումրի, Մ. Խորենացի 10/3{" "}
+                    <MarkerButton
+                      onClick={() => openGoogleMap({ target: "restaurant" })}
+                    />
                   </p>
                 </div>
               </div>
