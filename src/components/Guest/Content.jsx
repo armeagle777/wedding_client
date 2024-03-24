@@ -11,7 +11,7 @@ import "../../assets/css/nice-select.css";
 import "../../assets/css/style.css";
 
 import profileImage from "../../assets/profile.jpg";
-
+import circleImage from "../../assets/hero_circle.png";
 const Content = () => {
   return (
     <>
@@ -37,7 +37,8 @@ const Content = () => {
                   <div className="hero__caption text-center d-flex align-items-center caption-bg">
                     <div
                       style={{
-                        backgroundColor: "red",
+                        backgroundImage: `url(${circleImage})`,
+                        backgroundSize: "contain",
                         borderRadius: "50%",
                         width: 200,
                         height: 200,
@@ -51,10 +52,10 @@ const Content = () => {
                     >
                       <div className="circle-caption">
                         <span data-animation="fadeInUp" data-delay=".3s">
-                          Feb 14 2020
+                          Apr 5 2024
                         </span>
                         <h1 data-animation="fadeInUp" data-delay=".5s">
-                          Julia & Jakson
+                          Hrayr & Shoghik
                         </h1>
                         <p data-animation="fadeInUp" data-delay=".9s">
                           We are getting married
@@ -75,8 +76,8 @@ const Content = () => {
             <div className="col-lg-4">
               <div className="singl-services text-center mb-60">
                 <div className="top-caption">
-                  <h4>Rehearsal Dinner</h4>
-                  <p>July 20, 2020</p>
+                  <h4>Պսակադրություն</h4>
+                  <p>Ապր 5, 2024</p>
                 </div>
                 <div className="services-img">
                   <img src="assets/img/service/service1.png" alt="" />
@@ -85,10 +86,10 @@ const Content = () => {
                   </div>
                 </div>
                 <div className="bottom-caption">
-                  <span>12:00PM-2:00PM</span>
+                  <span>15:00-16:00</span>
                   <p>
-                    The Sierra Resort 14
-                    <br /> Pacific Grove Monterey, CA
+                    Հառիճավանք
+                    <br /> ՀՀ, Շիրակի մարզ, գ. Հառիճ
                   </p>
                 </div>
               </div>
@@ -96,8 +97,8 @@ const Content = () => {
             <div className="col-lg-4">
               <div className="singl-services text-center mb-60">
                 <div className="top-caption">
-                  <h4>The Ceremony</h4>
-                  <p>July 20, 2020</p>
+                  <h4>Հարսանյաց հանդես</h4>
+                  <p>Ապր 5, 2024</p>
                 </div>
                 <div className="services-img">
                   <img src="assets/img/service/service2.png" alt="" />
@@ -106,31 +107,10 @@ const Content = () => {
                   </div>
                 </div>
                 <div className="bottom-caption">
-                  <span>12:00PM-2:00PM</span>
+                  <span>18:00-23:59</span>
                   <p>
-                    The Sierra Resort 14
-                    <br /> Pacific Grove Monterey, CA
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="singl-services text-center mb-60">
-                <div className="top-caption">
-                  <h4>Afterparty</h4>
-                  <p>July 20, 2020</p>
-                </div>
-                <div className="services-img">
-                  <img src="assets/img/service/service3.png" alt="" />
-                  <div className="back-flower">
-                    <img src="assets/img/service/services_flower1.png" alt="" />
-                  </div>
-                </div>
-                <div className="bottom-caption">
-                  <span>12:00PM-2:00PM</span>
-                  <p>
-                    The Sierra Resort 14
-                    <br /> Pacific Grove Monterey, CA
+                    «Վիկտորիա» ռեստորան
+                    <br /> ք. Գյումրի, Մ. Խորենացի 10/3
                   </p>
                 </div>
               </div>
@@ -151,53 +131,20 @@ const Content = () => {
                         src="assets/img/memories/section_tittle_flowre.png"
                         alt=""
                       />
-                      <h2>Are you attending?</h2>
+                      <h2>Հաստատել մասնակցությունը</h2>
                     </div>
                   </div>
                 </div>
+                {/* Hide the dive if he has already accepted */}
                 <form id="contact-form" action="#" method="POST">
-                  <div className="row">
-                    <div className="col-lg-12">
-                      <div className="form-box mb-30">
-                        <input type="text" name="name" placeholder="Name" />
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <div className="form-box subject-icon mb-30">
-                        <input
-                          type="Email"
-                          name="subject"
-                          placeholder="Email"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12 mb-30">
-                      <div className="select-itms">
-                        <select name="select" id="select2">
-                          <option value="">1 Guest</option>
-                          <option value="">2 Guest</option>
-                          <option value="">3 Guest</option>
-                          <option value="">4 Guest</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <div className="form-box message-icon mb-30">
-                        <textarea
-                          name="message"
-                          id="message"
-                          placeholder="Your Message"
-                        ></textarea>
-                      </div>
-                      <div className="submit-info">
-                        <button className="btn2" type="submit">
-                          R.S.V.P
-                        </button>
-                      </div>
+                  <div className="col-lg-12">
+                    <div className="submit-info">
+                      <button className="btn2" type="submit">
+                        ՀԱՍՏԱՏԵԼ
+                      </button>
                     </div>
                   </div>
                 </form>
-
                 <div className="shape-inner-flower">
                   <img
                     src="assets/img/flower/form-smoll-left.png"
@@ -220,7 +167,6 @@ const Content = () => {
                     alt=""
                   />
                 </div>
-
                 <div className="shape-outer-flower">
                   <img
                     src="assets/img/flower/from-top.png"
