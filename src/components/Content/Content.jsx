@@ -1,3 +1,5 @@
+import { isDesktop } from "react-device-detect";
+
 import "../../assets/css/bootstrap.min.css";
 import "../../assets/css/owl.carousel.min.css";
 import "../../assets/css/flaticon.css";
@@ -13,7 +15,6 @@ import "../../assets/css/style.css";
 import profileImage from "../../assets/profile.jpg";
 import circleImage from "../../assets/hero_circle.png";
 import frameImage from "../../assets/frame.jpg";
-import heartImage from "../../assets/heart.png";
 import serviceOneImage from "../../assets/service1.png";
 import vanqImage from "../../assets/harijavanq.png";
 import flowerOne from "../../assets/services_flower1.png";
@@ -34,6 +35,24 @@ import { AcceptSection, GuestTableSection } from "@/components";
 
 const Content = () => {
   const invitedPersonName = `Հարգելի Սահակյաններ.`;
+
+  // Function to open Google Maps with the given location
+  const openGoogleMap = () => {
+    const location = "YOUR_LOCATION";
+    const url = `https://www.google.com/maps/search/?api=1&query=${location}`;
+    console.log("Map");
+    if (isDesktop) {
+      window.open(url, "_blank");
+    } else {
+      window.open(`geo:0,0?q=${location}`, "_blank");
+    }
+  };
+
+  const onConfirm = () => {
+    //functionality to add event to calendar
+    alert("Confirmed");
+  };
+
   return (
     <>
       <div className="slider-area">
@@ -58,7 +77,6 @@ const Content = () => {
                   <div className="hero__caption text-center d-flex align-items-center caption-bg">
                     <div
                       style={{
-                        backgroundImage: `url(${frameImage})`,
                         // backgroundImage: `url(${circleImage})`,
                         backgroundSize: "cover",
                         // borderRadius: "50%",
@@ -68,19 +86,19 @@ const Content = () => {
                         alignItems: "center",
                         justifyContent: "center",
                         position: "absolute",
-                        right: 185,
+                        right: 155,
                         bottom: 80,
                       }}
                     >
                       <div className="circle-caption">
                         <span data-animation="fadeInUp" data-delay=".3s">
-                          Apr 5 2024
+                          Ապրիլի 5, 2024
                         </span>
                         <h1 data-animation="fadeInUp" data-delay=".5s">
-                          Hrayr & Shoghik
+                          Հրայր & Շողիկ
                         </h1>
                         <p data-animation="fadeInUp" data-delay=".9s">
-                          We are getting married
+                          Մենք ամուսնանում ենք
                         </p>
                       </div>
                     </div>
@@ -109,6 +127,7 @@ const Content = () => {
                 <img src={storyFlRight} alt="" />
                 <p>{invitedPersonName}</p>
                 <p>Սիրով հրավիրում ենք մեր հարսանեկան արարողությանը:</p>
+                {/* <button onClick={openGoogleMap}>Map</button> */}
               </div>
             </div>
           </div>
@@ -175,7 +194,7 @@ const Content = () => {
           <div className="row">
             <div className="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
               <div className="form-wrapper">
-                <AcceptSection />
+                <AcceptSection onConfirm={onConfirm} />
                 <GuestTableSection />
                 <div className="shape-inner-flower">
                   <img src={leftFlower} className="top1" alt="" />
@@ -193,52 +212,7 @@ const Content = () => {
         </div>
       </div>
       <section className="contact-sections">
-        <div className="d-area">
-          {/* <div
-            id="map"
-            style={{
-              height: "500px",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          ></div> */}
-          {/* <script>
-              function initMap() {
-                  var uluru = {
-                      lat: -25.363,
-                      lng: 131.044
-                  };
-                  var grayStyles = [{
-                          featureType: "all",
-                          stylers: [{
-                                  saturation: -90
-                              },
-                              {
-                                  lightness: 50
-                              }
-                          ]
-                      },
-                      {
-                          elementType: 'labels.text.fill',
-                          stylers: [{
-                              color: '#ccdee9'
-                          }]
-                      }
-                  ];
-                  var map = new google.maps.Map(document.getElementById('map'), {
-                      center: {
-                          lat: -31.197,
-                          lng: 150.744
-                      },
-                      zoom: 9,
-                      styles: grayStyles,
-                      scrollwheel: false
-                  });
-              }
-          </script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
-          </script> */}
-        </div>
+        <div className="d-area"></div>
       </section>
       <div className="brand-area section-padding2">
         <div className="container"></div>

@@ -1,4 +1,4 @@
-const AcceptSection = () => {
+const AcceptSection = ({ onConfirm }) => {
   return (
     <>
       <div className="row ">
@@ -11,7 +11,7 @@ const AcceptSection = () => {
       </div>
       <div className="col-lg-12">
         <div className="submit-info">
-          <button className="btn2" type="submit">
+          <button className="btn2" onClick={onConfirm}>
             ՀԱՍՏԱՏԵԼ
           </button>
         </div>
