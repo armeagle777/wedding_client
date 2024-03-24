@@ -14,7 +14,7 @@ const AppRouter = () => {
     createRoutesFromElements(
       <>
         <Route path="/" element={<Home />} />
-        <Route path="/:guestId" element={<Guest />} />
+        <Route path="/guest" element={<Guest />} />
 
         <Route path="*" element={<NotFound message={"Chi gtnvel"} />} />
       </>
