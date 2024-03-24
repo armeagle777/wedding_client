@@ -12,6 +12,7 @@ import "../../assets/css/style.css";
 
 import profileImage from "../../assets/profile.jpg";
 import circleImage from "../../assets/hero_circle.png";
+import frameImage from "../../assets/frame.jpg";
 import heartImage from "../../assets/heart.png";
 import serviceOneImage from "../../assets/service1.png";
 import vanqImage from "../../assets/harijavanq.png";
@@ -57,10 +58,10 @@ const Content = () => {
                   <div className="hero__caption text-center d-flex align-items-center caption-bg">
                     <div
                       style={{
-                        backgroundImage: `url(${heartImage})`,
+                        backgroundImage: `url(${frameImage})`,
                         // backgroundImage: `url(${circleImage})`,
                         backgroundSize: "cover",
-                        borderRadius: "50%",
+                        // borderRadius: "50%",
                         width: 240,
                         height: 240,
                         display: "flex",
@@ -124,7 +125,7 @@ const Content = () => {
               <div className="singl-services text-center mb-60">
                 <div className="top-caption">
                   <h4>Պսակադրություն</h4>
-                  <p>Ապր 5, 2024</p>
+                  <p>Ապրիլի 5, 2024</p>
                 </div>
                 <div className="services-img">
                   <img
@@ -149,7 +150,7 @@ const Content = () => {
               <div className="singl-services text-center mb-60">
                 <div className="top-caption">
                   <h4>Հարսանյաց հանդես</h4>
-                  <p>Ապր 5, 2024</p>
+                  <p>Ապրիլի 5, 2024</p>
                 </div>
                 <div className="services-img">
                   <img src={serviceOneImage} alt="" />
@@ -161,7 +162,7 @@ const Content = () => {
                   <span>18:00-23:59</span>
                   <p>
                     «Վիկտորիա» ռեստորան
-                    <br /> ք. Գյումրի, Մ. Խորենացի 10/3
+                    <br /> ՀՀ, ք. Գյումրի, Մ. Խորենացի 10/3
                   </p>
                 </div>
               </div>
