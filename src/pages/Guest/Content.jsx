@@ -12,6 +12,17 @@ import "../../assets/css/style.css";
 
 import profileImage from "../../assets/profile.jpg";
 import circleImage from "../../assets/hero_circle.png";
+import serviceOneImage from "../../assets/service1.png";
+import vanqImage from "../../assets/harijavanq.png";
+import flowerOne from "../../assets/services_flower1.png";
+
+import leftFlower from "../../assets/form-smoll-left.png";
+import rightFlower from "../../assets/form-smoll-right.png";
+import bRightFlower from "../../assets/form-smoll-b-left.png";
+import bLeftFlower from "../../assets/form-smoll-b-right.png";
+import topFlower from "../../assets/from-top.png";
+import bottomFlower from "../../assets/from-bottom.png";
+
 const Content = () => {
   return (
     <>
@@ -80,9 +91,13 @@ const Content = () => {
                   <p>Ապր 5, 2024</p>
                 </div>
                 <div className="services-img">
-                  <img src="assets/img/service/service1.png" alt="" />
+                  <img
+                    src={vanqImage}
+                    alt=""
+                    style={{ width: 250, height: 250 }}
+                  />
                   <div className="back-flower">
-                    <img src="assets/img/service/services_flower1.png" alt="" />
+                    <img src={flowerOne} alt="" />
                   </div>
                 </div>
                 <div className="bottom-caption">
@@ -101,9 +116,9 @@ const Content = () => {
                   <p>Ապր 5, 2024</p>
                 </div>
                 <div className="services-img">
-                  <img src="assets/img/service/service2.png" alt="" />
+                  <img src={serviceOneImage} alt="" />
                   <div className="back-flower">
-                    <img src="assets/img/service/services_flower1.png" alt="" />
+                    <img src={flowerOne} alt="" />
                   </div>
                 </div>
                 <div className="bottom-caption">
@@ -136,48 +151,23 @@ const Content = () => {
                   </div>
                 </div>
                 {/* Hide the dive if he has already accepted */}
-                <form id="contact-form" action="#" method="POST">
-                  <div className="col-lg-12">
-                    <div className="submit-info">
-                      <button className="btn2" type="submit">
-                        ՀԱՍՏԱՏԵԼ
-                      </button>
-                    </div>
+                <div className="col-lg-12">
+                  <div className="submit-info">
+                    <button className="btn2" type="submit">
+                      ՀԱՍՏԱՏԵԼ
+                    </button>
                   </div>
-                </form>
+                </div>
+
                 <div className="shape-inner-flower">
-                  <img
-                    src="assets/img/flower/form-smoll-left.png"
-                    className="top1"
-                    alt=""
-                  />
-                  <img
-                    src="assets/img/flower/form-smoll-right.png"
-                    className="top2"
-                    alt=""
-                  />
-                  <img
-                    src="assets/img/flower/form-smoll-b-left.png"
-                    className="top3"
-                    alt=""
-                  />
-                  <img
-                    src="assets/img/flower/form-smoll-b-right.png"
-                    className="top4"
-                    alt=""
-                  />
+                  <img src={leftFlower} className="top1" alt="" />
+                  <img src={rightFlower} className="top2" alt="" />
+                  <img src={bRightFlower} className="top3" alt="" />
+                  <img src={bLeftFlower} className="top4" alt="" />
                 </div>
                 <div className="shape-outer-flower">
-                  <img
-                    src="assets/img/flower/from-top.png"
-                    className="outer-top"
-                    alt=""
-                  />
-                  <img
-                    src="assets/img/flower/from-bottom.png"
-                    className="outer-bottom"
-                    alt=""
-                  />
+                  <img src={topFlower} className="outer-top" alt="" />
+                  <img src={bottomFlower} className="outer-bottom" alt="" />
                 </div>
               </div>
             </div>

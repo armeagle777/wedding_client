@@ -1,22 +1,21 @@
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
   Route,
   RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
 } from "react-router-dom";
 
-import { Home, NotFound } from "@/pages";
-
-import { Guest } from "..";
+import { NotFound, Guest } from "@/pages";
 
 const AppRouter = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/" element={<Home />} />
         <Route path="/guest" element={<Guest />} />
-
-        <Route path="*" element={<NotFound message={"Chi gtnvel"} />} />
+        <Route
+          path="*"
+          element={<NotFound message="Նման էջ գոյություն չունի" />}
+        />
       </>
     )
   );
