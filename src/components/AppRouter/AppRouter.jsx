@@ -11,7 +11,7 @@ const AppRouter = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/guest" element={<Guest />} />
+        <Route path="/:guestId" element={<Guest />} />
         <Route
           path="*"
           element={<NotFound message="Նման էջ գոյություն չունի" />}

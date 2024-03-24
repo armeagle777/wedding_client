@@ -1,12 +1,13 @@
 import { BrowserView, MobileView } from "react-device-detect";
+import { useParams } from "react-router-dom";
 
-import Footer from "./Footer";
-import Header from "./Header";
-import Content from "./Content";
+import { Content } from "@/components";
 
 import "./styles.css";
 
 const Guest = () => {
+  const { guestId } = useParams();
+
   return (
     <MobileView>
       <div className="guest-container">

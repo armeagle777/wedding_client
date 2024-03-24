@@ -23,7 +23,15 @@ import bLeftFlower from "../../assets/form-smoll-b-right.png";
 import topFlower from "../../assets/from-top.png";
 import bottomFlower from "../../assets/from-bottom.png";
 
+import storyFlRight from "../../assets/flower_right.png";
+import storyFlLeft from "../../assets/shape_left.png";
+import storyShapeRight from "../../assets/shape_right.png";
+import storyFlTop from "../../assets/flower_top.png";
+
+import { AcceptSection, GuestTableSection } from "@/components";
+
 const Content = () => {
+  const invitedPersonName = `Հարգելի Սահակյաններ.`;
   return (
     <>
       <div className="slider-area">
@@ -80,7 +88,33 @@ const Content = () => {
           </div>
         </div>
       </div>
-
+      <div
+        className="Our-story-area story-padding"
+        style={{ backgroundColor: "#fff" }}
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="story-img mb-100">
+                <div className="shape-flower-img">
+                  <img src={storyFlTop} className="flower-top" alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="story-caption">
+                <img src={storyFlRight} alt="" />
+                <p>{invitedPersonName}</p>
+                <p>Սիրով հրավիրում ենք մեր հարսանեկան արարողությանը:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shape-flower d-none d-xl-block">
+          <img src={storyFlLeft} class="flower1" alt="" />
+          <img src={storyShapeRight} class="flower2 " alt="" />
+        </div>
+      </div>
       <div className="service-area ">
         <div className="container">
           <div className="row">
@@ -133,32 +167,13 @@ const Content = () => {
           </div>
         </div>
       </div>
-
       <div className="contact-form section-padding2 fix">
         <div className="container">
           <div className="row">
             <div className="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
               <div className="form-wrapper">
-                <div className="row ">
-                  <div className="col-lg-12">
-                    <div className="section-tittle tittle-form text-center">
-                      <img
-                        src="assets/img/memories/section_tittle_flowre.png"
-                        alt=""
-                      />
-                      <h2>Հաստատել մասնակցությունը</h2>
-                    </div>
-                  </div>
-                </div>
-                {/* Hide the dive if he has already accepted */}
-                <div className="col-lg-12">
-                  <div className="submit-info">
-                    <button className="btn2" type="submit">
-                      ՀԱՍՏԱՏԵԼ
-                    </button>
-                  </div>
-                </div>
-
+                <AcceptSection />
+                <GuestTableSection />
                 <div className="shape-inner-flower">
                   <img src={leftFlower} className="top1" alt="" />
                   <img src={rightFlower} className="top2" alt="" />
@@ -174,7 +189,6 @@ const Content = () => {
           </div>
         </div>
       </div>
-
       <section className="contact-sections">
         <div className="d-area">
           {/* <div
@@ -223,7 +237,6 @@ const Content = () => {
           </script> */}
         </div>
       </section>
-
       <div className="brand-area section-padding2">
         <div className="container"></div>
       </div>
