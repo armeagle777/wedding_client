@@ -12,6 +12,7 @@ import "../../assets/css/style.css";
 
 import profileImage from "../../assets/profile.jpg";
 import circleImage from "../../assets/hero_circle.png";
+import heartImage from "../../assets/heart.png";
 import serviceOneImage from "../../assets/service1.png";
 import vanqImage from "../../assets/harijavanq.png";
 import flowerOne from "../../assets/services_flower1.png";
@@ -56,11 +57,12 @@ const Content = () => {
                   <div className="hero__caption text-center d-flex align-items-center caption-bg">
                     <div
                       style={{
-                        backgroundImage: `url(${circleImage})`,
-                        backgroundSize: "contain",
+                        backgroundImage: `url(${heartImage})`,
+                        // backgroundImage: `url(${circleImage})`,
+                        backgroundSize: "cover",
                         borderRadius: "50%",
-                        width: 200,
-                        height: 200,
+                        width: 240,
+                        height: 240,
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -110,9 +112,9 @@ const Content = () => {
             </div>
           </div>
         </div>
-        <div class="shape-flower d-none d-xl-block">
-          <img src={storyFlLeft} class="flower1" alt="" />
-          <img src={storyShapeRight} class="flower2 " alt="" />
+        <div className="shape-flower d-none d-xl-block">
+          <img src={storyFlLeft} className="flower1" alt="" />
+          <img src={storyShapeRight} className="flower2 " alt="" />
         </div>
       </div>
       <div className="service-area ">
