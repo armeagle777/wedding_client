@@ -7,7 +7,7 @@ import {
 
 import { Home, NotFound } from "@/pages";
 
-import { Guest } from "../Guest";
+import { Guest } from "../Guest/Guest";
 
 const AppRouter = () => {
   const router = createBrowserRouter(
