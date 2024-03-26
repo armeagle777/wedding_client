@@ -1,26 +1,16 @@
-import { Space, Spin } from 'antd';
+import { Space, Spin } from "antd";
 
-const Loader = ({ text }) => (
+const Loader = () => (
   <Space
     direction="horizontal"
     style={{
-      width: '100%',
-      height: '100%',
-      justifyContent: 'center',
+      width: "100vw",
+      height: "100vh",
+      justifyContent: "center",
+      alignItems: "center",
     }}
   >
-    <Space>
-      <Spin tip={text} size="large">
-        <div
-          className="content"
-          style={{
-            padding: '50px',
-            background: 'rgba(0, 0, 0, 0.05)',
-            borderRadius: '4px',
-          }}
-        />
-      </Spin>
-    </Space>
+    <Spin size="large" />
   </Space>
 );
 export default Loader;

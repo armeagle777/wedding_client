@@ -89,7 +89,7 @@ const Content = () => {
                         justifyContent: "center",
                         position: "absolute",
                         right: 165,
-                        bottom: 80,
+                        bottom: 60,
                       }}
                     >
                       <div className="circle-caption">

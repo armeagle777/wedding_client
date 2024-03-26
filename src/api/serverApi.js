@@ -4,12 +4,8 @@ const serverApi = axios.create({
   baseURL: import.meta.env.VITE_SERVER_URL,
 });
 
-export const getJkkViolations = async ({ countries, companies }) => {
-  const response = await serverApi.post("/tables/jkk", {
-    countries,
-    companies,
-  });
-  // const response = await serverApi.get('/violations', { countries, companies });
+export const getGuestInfo = async ({ guestId }) => {
+  const response = await serverApi.get(`/guests/${guestId}`);
 
   return response.data;
 };
