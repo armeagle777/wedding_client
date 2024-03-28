@@ -243,12 +243,30 @@ const Content = () => {
           </div>
         </div>
       </div> */}
-      <section className="contact-sections">
-        <div className="d-area"></div>
-      </section>
-      <div className="brand-area section-padding2">
-        <div className="container"></div>
-      </div>
+      <footer>
+        <div className="footer-main footer-bg">
+          <div className="footer-area pt-4">
+            <div className="container">
+              <div className="row d-flex justify-content-between">
+                <div className="col-xl-4 col-lg-4 col-md-5 col-sm-8">
+                  <div className="single-footer-caption mb-50">
+                    <div className="single-footer-caption mb-30">
+                      <div className="footer-tittle">
+                        <div className="footer-pera">
+                          <p className="info1">Designed By</p>
+                          <p className="info2">Tigran Yeranyan</p>
+                          <p className="info2">tyeranyan@gmail.com</p>
+                          <p className="info2">+(374) 98 - 35 - 20 - 11</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
