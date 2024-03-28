@@ -1,18 +1,21 @@
+import { Button } from "antd";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
-const MarkerButton = ({ onClick }) => {
+const MarkerButton = ({ onClick, text }) => {
   return (
-    <button
+    <Button
       onClick={onClick}
-      style={{
-        color: "red",
-        outline: "none",
-        border: "none",
-        background: "transparent",
-      }}
+      icon={<FaMapMarkerAlt />}
+      type="text"
+      // style={{
+      //   color: "red",
+      //   outline: "none",
+      //   border: "none",
+      //   background: "transparent",
+      // }}
     >
-      <FaMapMarkerAlt />
-    </button>
+      {text}
+    </Button>
   );
 };
 

@@ -33,7 +33,7 @@ import storyFlTop from "../../assets/flower_top.png";
 import { AcceptSection, GuestTableSection, MarkerButton } from "@/components";
 
 const Content = () => {
-  const invitedPersonName = `Հարգելի Սահակյաններ.`;
+  const invitedPersonName = `Սիրելիներ.`;
 
   // Function to open Google Maps with the given location
   const openGoogleMap = ({ target }) => {
@@ -196,7 +196,7 @@ const Content = () => {
           </div>
         </div>
       </div>
-      <div className="contact-form section-padding2 fix">
+      {/* <div className="contact-form section-padding2 fix">
         <div className="container">
           <div className="row">
             <div className="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
@@ -217,7 +217,7 @@ const Content = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <section className="contact-sections">
         <div className="d-area"></div>
       </section>

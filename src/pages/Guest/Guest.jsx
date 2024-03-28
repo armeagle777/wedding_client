@@ -8,18 +8,18 @@ import { useQuery } from "@tanstack/react-query";
 import { getGuestInfo } from "../../api/serverApi";
 
 const Guest = () => {
-  const { guestId } = useParams();
-  const { data, isLoading, isFetching, isError, error } = useQuery(
-    ["guests", guestId],
-    () => getGuestInfo(guestId),
-    {
-      keepPreviousData: true,
-    }
-  );
+  // const { guestId } = useParams();
+  // const { data, isLoading, isFetching, isError, error } = useQuery(
+  //   ["guests", guestId],
+  //   () => getGuestInfo(guestId),
+  //   {
+  //     keepPreviousData: true,
+  //   }
+  // );
 
-  if (isError) return <Alert message="Փորձեք մի փոքր ուշ" />;
+  // if (isError) return <Alert message="Փորձեք մի փոքր ուշ" />;
 
-  if (isFetching || isLoading) return <Loader />;
+  // if (isFetching || isLoading) return <Loader />;
 
   return (
     <MobileView>
