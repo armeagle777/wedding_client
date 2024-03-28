@@ -31,6 +31,7 @@ import storyShapeRight from "../../assets/shape_right.png";
 import storyFlTop from "../../assets/flower_top.png";
 
 import { AcceptSection, GuestTableSection, MarkerButton } from "@/components";
+import { Button } from "antd";
 
 const Content = () => {
   const invitedPersonName = `Սիրելիներ.`;
@@ -161,10 +162,21 @@ const Content = () => {
                   <span>15:00-16:00</span>
                   <p>
                     Հառիճավանք
-                    <br /> ՀՀ, Շիրակի մարզ, գ. Հառիճ{" "}
+                    <br />
                     <MarkerButton
                       onClick={() => openGoogleMap({ target: "church" })}
                     />
+                    <button
+                      style={{
+                        outline: "none",
+                        color: "#000",
+                        border: 0,
+                        background: "transparent",
+                        marginLeft: 4,
+                      }}
+                    >
+                      ՀՀ, Շիրակի մարզ, գ. Հառիճ
+                    </button>
                   </p>
                 </div>
               </div>
@@ -185,10 +197,21 @@ const Content = () => {
                   <span>18:00-23:59</span>
                   <p>
                     «Վիկտորիա» ռեստորան
-                    <br /> ՀՀ, ք. Գյումրի, Մ. Խորենացի 10/3{" "}
+                    <br />{" "}
                     <MarkerButton
                       onClick={() => openGoogleMap({ target: "restaurant" })}
                     />
+                    <button
+                      style={{
+                        outline: "none",
+                        color: "#000",
+                        border: 0,
+                        background: "transparent",
+                        marginLeft: 4,
+                      }}
+                    >
+                      ՀՀ, ք. Գյումրի, Մ. Խորենացի 10/3
+                    </button>
                   </p>
                 </div>
               </div>
