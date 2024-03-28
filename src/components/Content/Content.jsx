@@ -174,6 +174,7 @@ const Content = () => {
                         background: "transparent",
                         marginLeft: 4,
                       }}
+                      onClick={() => openGoogleMap({ target: "church" })}
                     >
                       ՀՀ, Շիրակի մարզ, գ. Հառիճ
                     </button>
@@ -209,6 +210,7 @@ const Content = () => {
                         background: "transparent",
                         marginLeft: 4,
                       }}
+                      onClick={() => openGoogleMap({ target: "restaurant" })}
                     >
                       ՀՀ, ք. Գյումրի, Մ. Խորենացի 10/3
                     </button>
