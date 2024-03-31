@@ -37,18 +37,42 @@ const Content = () => {
   const invitedPersonName = `Սիրելիներ.`;
 
   // Function to open Google Maps with the given location
+  // const openGoogleMap = ({ target }) => {
+  //   const locations = {
+  //     church: "Հառիճավանք",
+  //     restaurant: "Victoria Wedding Hall",
+  //   };
+  //   const location = locations[target];
+  //   const url = `https://www.google.com/maps/search/?api=1&query=${location}`;
+
+  //   if (isDesktop) {
+  //     window.open(url, "_blank");
+  //   } else {
+  //     window.open(`geo:0,0?q=${location}`, "_blank");
+  //   }
+  // };
   const openGoogleMap = ({ target }) => {
     const locations = {
       church: "Հառիճավանք",
       restaurant: "Victoria Wedding Hall",
     };
     const location = locations[target];
-    const url = `https://www.google.com/maps/search/?api=1&query=${location}`;
 
     if (isDesktop) {
+      const url = `https://www.google.com/maps/search/?api=1&query=${location}`;
       window.open(url, "_blank");
     } else {
-      window.open(`geo:0,0?q=${location}`, "_blank");
+      // Check if iOS device
+      const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      if (iOS) {
+        // Open in Google Maps app using universal link
+        const url = `https://maps.apple.com/?q=${location}`;
+        window.open(url, "_blank");
+      } else {
+        // Open in other mobile devices using geo URI scheme
+        const url = `geo:0,0?q=${location}`;
+        window.open(url, "_blank");
+      }
     }
   };
 
